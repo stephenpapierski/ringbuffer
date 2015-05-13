@@ -62,6 +62,13 @@ struct ring_buffer_t {
 void ring_buffer_init(ring_buffer_t *buffer);
 
 /**
+ * Macro for ring_buffer_init(ring_buffer_t *buffer)
+ * Resets and flushes buffer
+ * @param buffer The ring buffer to flush
+ */
+#define ring_buffer_flush(buffer) ring_buffer_init(buffer)
+
+/**
  * Adds a byte to a ring buffer.
  * @param buffer The buffer in which the data should be placed.
  * @param data The byte to place.
